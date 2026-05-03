@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>🌸 リベシティ 4月キャンペーン管理</title>
+  <title>🌸 リベシティ 5月キャンペーン管理</title>
   <style>
     :root {
       --pink-50:  #FFF0F5;
@@ -407,8 +407,8 @@
   <div class="header-top">
     <div class="mascot">🐯</div>
     <div class="header-title">
-      <h1>リベシティ 4月キャンペーン</h1>
-      <p>2026年4月更新 ／ 全<span id="hTotal">0</span>キャンペーン</p>
+      <h1>リベシティ 5月キャンペーン</h1>
+      <p>2026年5月更新 ／ 全<span id="hTotal">0</span>キャンペーン</p>
     </div>
   </div>
   <div class="progress-box">
@@ -433,7 +433,7 @@
 <div class="list" id="list"></div>
 
 <div class="footer">
-  🌸 リベシティ 4月キャンペーン管理<br>
+  🌸 リベシティ 5月キャンペーン管理<br>
   ※ チェックはこのデバイスに保存されます<br>
   ※ 予算到達次第、早期終了の可能性あり
 </div>
@@ -445,102 +445,27 @@
 const CAMPAIGNS = [
   // ── 期間限定 ──────────────────────────────────────
   {
-    id: 'tsuchokyo',
-    type: 'limited',
-    icon: '📊',
-    title: '5つの力の通知表キャンペーン',
-    deadline: '2026-04-09',
-    dlLabel: '4/9〆',
-    target: '応援会員',
-    reward: '30pt（全員）＋ 抽選30名 1,000pt',
-    steps: [
-      '「5つの力の通知表」を確認する',
-      'つぶやきを投稿する',
-    ],
-    detail: '応援会員の方が対象です。5つの力の通知表を確認してつぶやき投稿するとリベポイントが全員もらえ、抽選で30名には追加1,000ptも！',
-  },
-  {
-    id: 'skillup_revival',
-    type: 'limited',
-    icon: '💻',
-    title: '【復刻】スキルアップキャンペーン',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
-    target: '全会員',
-    reward: '最大 200pt',
-    steps: [
-      '対象のITスキルを習得する',
-      'つぶやきを投稿する',
-    ],
-    detail: '対象のITスキルを習得してつぶやき投稿するとリベポイントをプレゼント！最大200ptもらえます。',
-  },
-  {
-    id: 'ai_share',
+    id: 'claude_campaign',
     type: 'limited',
     icon: '🤖',
-    title: 'エージェント型AI 活用事例シェア祭り',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
+    title: 'Claude Code/Cowork使おうキャンペーン',
+    deadline: '2026-05-31',
+    dlLabel: '5/31〆',
     target: '全会員',
-    reward: '最大 10万pt',
+    reward: '最大 1,700pt',
     steps: [
-      'ClaudeCode または Cowork を活用する',
-      'リベシティで活用事例をシェアする',
+      'Claude Code または Cowork を活用する',
+      'つぶやきで活用事例を投稿する',
     ],
-    detail: 'ClaudeCode・Coworkの活用事例をシェアするだけで最大10万ptという超大型キャンペーン！ぜひ積極的に参加しましょう。',
-  },
-  {
-    id: 'library',
-    type: 'limited',
-    icon: '📚',
-    title: 'ノウハウ図書館 記事投稿応援キャンペーン',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
-    target: '全会員',
-    reward: '最大 2,500pt（初投稿・人気記事は上乗せあり）',
-    steps: [
-      'ノウハウ図書館に記事を投稿する',
-    ],
-    detail: 'ノウハウ図書館に記事を投稿した方に増額でリベポイントをプレゼント！初投稿記事や人気記事はさらに上乗せポイントあり。最大2,500pt獲得可能。',
-  },
-  {
-    id: 'kakeibo',
-    type: 'limited',
-    icon: '💰',
-    title: '公式【支出管理ツール】で家計を見える化キャンペーン',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
-    target: '全会員',
-    reward: '最大 1,250pt',
-    steps: [
-      '公式ツールで支出の状況を把握する',
-      'つぶやきを投稿する',
-      'アンケートに回答する',
-    ],
-    detail: '公式ツールを使って支出を把握＆つぶやき投稿＆アンケート回答で最大1,250ptもらえます。',
-  },
-  {
-    id: 'kids',
-    type: 'limited',
-    icon: '👦',
-    title: 'こどもスクール参加キャンペーン',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
-    target: '全会員',
-    reward: '50pt',
-    steps: [
-      'こどもスクールの授業に参加する',
-      'つぶやきを投稿する',
-    ],
-    detail: 'こどもスクールの授業に参加してつぶやき投稿するとリベポイントをプレゼント！50pt獲得できます。',
+    detail: 'Claudeの活用事例をつぶやきで投稿した方にリベポイントをプレゼント！最大1,700ptもらえます。どんな使い方でも気軽に投稿してみましょう。',
   },
   {
     id: 'homework_challenge',
     type: 'limited',
     icon: '🏆',
     title: '学長ミッション特別編！宿題リスト2週間チャレンジ',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
+    deadline: '2026-05-31',
+    dlLabel: '5/31〆',
     target: '初挑戦・未達成の方',
     reward: '毎日10pt × 14日 ＋ 週ボーナス100pt ＋ 限定ぬいぐるみ',
     steps: [
@@ -550,71 +475,41 @@ const CAMPAIGNS = [
     detail: '2週間連続で宿題リストに取り組み、毎日つぶやき投稿した方に限定ぬいぐるみ＆リベポイントをプレゼント！初挑戦・未達成の方が対象です。',
   },
   {
-    id: 'market',
+    id: 'library_boost',
     type: 'limited',
-    icon: '🏪',
-    title: '「リベシティ市場」オープン記念！ポイントバック祭り',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
+    icon: '📚',
+    title: 'ノウハウ図書館 ポイント増量キャンペーン',
+    deadline: '2026-05-31',
+    dlLabel: '5/31〆',
     target: '全会員',
-    reward: '最大20%ポイント還元',
+    reward: 'ノウハウ図書館リベポイント 増額',
     steps: [
-      '対象となる関連サービスを利用する',
+      'キャンペーン期間中にノウハウ図書館に記事を投稿する',
     ],
-    detail: 'リベシティ市場オープン記念！対象の関連サービスを利用するだけで最大20%をポイント還元。',
+    detail: 'キャンペーン期間中はノウハウ図書館のリベポイントを増額でプレゼント！いつもより多くポイントをもらえるチャンスです。記事の投稿でコミュニティに貢献しながらポイントもゲット。',
   },
   {
-    id: 'kasegu',
+    id: 'skillup_revival',
     type: 'limited',
-    icon: '💼',
-    title: '「稼ぐ力」応援キャンペーン',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
+    icon: '💻',
+    title: '【復刻】スキルアップキャンペーン',
+    deadline: '2026-05-31',
+    dlLabel: '5/31〆',
     target: '全会員',
-    reward: '売上金額（税込）の5%ポイント還元',
+    reward: '最大 200pt',
     steps: [
-      '対象の関連サービスで売上を発生させる',
-      '申請する',
-    ],
-    detail: '対象の関連サービスで売上が発生＆申請で、売上金額（税込）の5%をポイント還元！稼ぐ力を身につけながらポイントもゲット。',
-  },
-  {
-    id: 'zero1',
-    type: 'limited',
-    icon: '🎯',
-    title: '【ゼロイチ達成】応援キャンペーン',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
-    target: '全会員',
-    reward: '最大 3,000pt（1人1回）',
-    steps: [
-      'リベシティ関連サービスで案件を初受注する',
-      '申請する',
-    ],
-    detail: 'リベシティ関連サービスで案件を初受注した方にリベポイントをプレゼント！最大3,000ptが1人1回もらえます。初めての受注を頑張りましょう！',
-  },
-  {
-    id: 'shinjuku',
-    type: 'limited',
-    icon: '🏢',
-    title: '新宿西口オフィス開設記念！オフィスへ行こうキャンペーン',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
-    target: '全会員',
-    reward: '100pt',
-    steps: [
-      'リベシティ新宿西口オフィスを訪問する',
+      '対象のITスキルを習得する',
       'つぶやきを投稿する',
     ],
-    detail: 'リベシティオフィスを訪問してつぶやき投稿するとリベポイントをプレゼント！100ptもらえます。新宿西口オフィスにぜひ足を運んでみましょう。',
+    detail: '対象のITスキルを習得してつぶやき投稿するとリベポイントをプレゼント！最大200ptもらえます。',
   },
   {
     id: 'lottery',
     type: 'limited',
     icon: '🎰',
     title: 'くじ引きキャンペーン',
-    deadline: '2026-04-30',
-    dlLabel: '4/30〆',
+    deadline: '2026-05-31',
+    dlLabel: '5/31〆',
     target: '応援会費2,200円以上の方',
     reward: '利用ptの10〜100%（最大 4万pt）',
     steps: [
@@ -634,7 +529,6 @@ const CAMPAIGNS = [
     reward: '主催：オンライン1,000pt / オフライン3,000pt　参加：100pt',
     steps: [
       '強化月間のテーマに沿ったイベントを主催 または 参加する',
-      '（4月より「Claude Code」「Claude Cowork」が追加）',
     ],
     detail: '強化月間のテーマに沿ったイベントを主催または参加した方にリベポイントをプレゼント！主催でオンライン1,000pt・オフライン3,000pt、参加で100pt獲得できます。',
   },
@@ -658,14 +552,14 @@ const CAMPAIGNS = [
 // ============================================================
 // STATE
 // ============================================================
-const TODAY = new Date('2026-04-13');
+const TODAY = new Date('2026-05-03');
 
 function loadState() {
-  try { return JSON.parse(localStorage.getItem('libe_state') || '{}'); }
+  try { return JSON.parse(localStorage.getItem('libe_may_state') || '{}'); }
   catch { return {}; }
 }
 function saveState() {
-  localStorage.setItem('libe_state', JSON.stringify(state));
+  localStorage.setItem('libe_may_state', JSON.stringify(state));
 }
 
 let state = loadState(); // { [id]: { done: bool, step_0: bool, step_1: bool } }
